@@ -16,8 +16,7 @@ def test_function() -> None:
 def test_complex() -> None:
     """Test if the object for a complex number instantiates."""
     complex = Complex(1.0, 2.0)
-    assert np.allclose(complex.realpart, 1.0) \
-        and np.allclose(complex.imagpart, 2.0)
+    assert np.allclose(complex.realpart, 1.0) and np.allclose(complex.imagpart, 2.0)
 
 
 def test_add() -> None:
@@ -25,8 +24,7 @@ def test_add() -> None:
     complex1 = Complex(0.0, 1.0)
     complex2 = Complex(1.0, 0.0)
     complex3 = complex1.add(complex2)
-    assert np.allclose(complex3.realpart, 1.0) \
-        and np.allclose(complex3.imagpart, 1.0)
+    assert np.allclose(complex3.realpart, 1.0) and np.allclose(complex3.imagpart, 1.0)
 
 
 def test_mul() -> None:
@@ -35,5 +33,4 @@ def test_mul() -> None:
     complex2 = Complex(1.0, 1.0)
     mul = complex1.multiply(complex2)
     test = (1.0j) * (1 + 1.0j)
-    assert np.allclose(mul.realpart, test.real) \
-        and np.allclose(mul.imagpart, test.imag)
+    assert np.allclose(mul.realpart, test.real) and np.allclose(mul.imagpart, test.imag)

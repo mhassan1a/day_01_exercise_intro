@@ -25,7 +25,6 @@ class Complex(object):
         """
         # TODO: write me.
 
-
     def add(self, other: Complex) -> Complex:
         """Add to complex numbers.
 
@@ -82,9 +81,8 @@ class Complex(object):
         """
         # TODO: Implement me.
         return None
-        
-        
-        
+
+
 def average(x: np.ndarray) -> np.ndarray:
     """Shrink the input by averaging all neighbouring inputs.
 

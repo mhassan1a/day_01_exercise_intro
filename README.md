@@ -6,7 +6,7 @@ In vscode, you can open a rendered version of this readme. Right-click the file 
 - Navigate to `https://docs.conda.io/en/latest/miniconda.html` in your favorite browser.
 The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` file.
 
-- Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64` .
+- Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64.sh`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64.sh` .
 
 
 ### Task 2: Setting up vscode for python development

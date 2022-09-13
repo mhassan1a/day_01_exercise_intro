@@ -10,7 +10,7 @@ The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` 
 
 
 ### Task 2: Setting up vscode for python development
-- Open visual studio code. It installed on HRZ machines. If you are using your own computer download it i.e. from https://code.visualstudio.com/ . And install it.
+- Open visual studio code. It installed on HRZ machines. If you are using your own computer download it i.e. from https://code.visualstudio.com/ . Install it.
 - Click on the extensions tab or press `Ctrl+Shift+X`. Install the `Python` and `Remote-SSH` extensions. Choose the versions provided by Microsoft.
 - Make the Miniconda interpreter your default in vscode by pressing `Ctrl+Shift+P`. A terminal opens. Type `select interpreter` and press enter. In the following dialogue, choose the `base` environment. 
 

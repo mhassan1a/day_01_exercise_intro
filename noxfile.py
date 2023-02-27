@@ -26,6 +26,7 @@ def lint(session):
     session.run("flake8", "src", "tests", "noxfile.py")
 
 
+
 @nox.session(name="typing")
 def mypy(session):
     """Check type hints."""

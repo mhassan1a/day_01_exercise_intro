@@ -6,20 +6,25 @@ In vscode, you can open a rendered version of this readme. Right-click the file 
 - Navigate to `https://docs.conda.io/en/latest/miniconda.html` in your favorite browser.
 The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` file.
 
-- Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64` .
+- Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64.sh`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64.sh` . During installation allow the installer to initilize your terminal environment.
 
 
 ### Task 2: Setting up vscode for python development
+- Open visual studio code. It is already installed on HRZ machines. If you are using your own computer download it i.e. from https://code.visualstudio.com/ .
 - Click on the extensions tab or press `Ctrl+Shift+X`. Install the `Python` and `Remote-SSH` extensions. Choose the versions provided by Microsoft.
 - Make the Miniconda interpreter your default in vscode by pressing `Ctrl+Shift+P`. A terminal opens. Type `select interpreter` and press enter. In the following dialogue, choose the `base` environment. 
 
-### Task 3: Installing dependencies
-- Open a terminal by pressing `Ctrl+Alt+T`. Navigate into this directory by typing `cd path_to_this_folder`. Type
-
+### Task 3: Setting up your repository.
+- Configure GitHub for ssh access. You need to generate a key pair and add the public key to your GitHub account.
+  - To generate your key follow the steps in: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+  - How to add a key is described here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+- Open a terminal by pressing `Ctrl+Alt+T`.
+- Clone this repository by running `git clone git@github.com:Machine-Learning-Foundations-in-Python/day_01_exercise_intro.git` in the terminal. Navigate into this directory by typing `cd day_01_exercise_intro`. 
+- Type
   ```bash
   $ pip install -r requirements.txt
   ```
-To install the python packages required for this exercise.
+  To install the python packages required for this exercise.
 
 ### Task 4: Run an automatic test.
 - Scientific software must provide reproducible results. Automatic testing ensures our software runs reliably. We recommend Nox for test automation `https://nox.thea.codes/en/stable/`. 

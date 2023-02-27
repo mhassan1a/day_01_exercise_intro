@@ -82,15 +82,3 @@ class Complex(object):
         # TODO: Implement me.
         return None
 
-
-def average(x: np.ndarray) -> np.ndarray:
-    """Shrink the input by averaging all neighbouring inputs.
-
-    Args:
-        x (np.ndarray): The input array of shape [length].
-
-    Returns:
-        np.ndarray: The output array of shape [length/2].
-    """
-    # TODO: Implement me.
-    return None

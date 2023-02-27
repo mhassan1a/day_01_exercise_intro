@@ -42,7 +42,7 @@ To install the python packages required for this exercise.
 
 ### Task 8: Plotting
 - Run `python ./src/julia.py` to comput a plot of the Julia set with your `Complex` class (see: https://en.wikipedia.org/wiki/Julia_set for more information).
-- In `src/julia.py` use `plt.plot` and `plt.imshow` to visualize the julia-set.
+- In `src/julia.py` use `plt.plot` and `plt.imshow` to visualize the julia-set. Feel free to play with `c` to create different sets.
 
 
 ### Task 9: Getting nox to help you format your code.

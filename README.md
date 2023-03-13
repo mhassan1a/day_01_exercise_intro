@@ -44,13 +44,13 @@ To install the python packages required for this exercise.
 - Open `src/my_code.py` and finish the `__init__` function of the `Complex` class. The idea here is to implement support for complex numbers. Double-check your code by running `nox -s test`. 
 
 ### Task 7: Breakpoints
-- Click on a line number in `my_code.py`. A red dot appears. Press the `debug_test` button in the `Testing` tab, Python will pause, and you can use the build-in `Debug console`` to explore the data at this point.
+- Click on a line number in `my_code.py`. A red dot appears. Press the `debug_test` button in the `Testing` tab, Python will pause, and you can use the build-in `Debug console` to explore the data at this point.
 
 ### Task 8: Implement the remaining functions in my_code.py
 - Implement and test the `add`, `radius`, `angle`, and `multiply` functions.
 
 ### Task 9: Plotting
-- Run `python ./src/julia.py` to comput a plot of the Julia set with your `Complex` class (see: https://en.wikipedia.org/wiki/Julia_set for more information).
+- Run `python ./src/julia.py` to compute a plot of the Julia set with your `Complex` class (see: https://en.wikipedia.org/wiki/Julia_set for more information).
 - In `src/julia.py` use `plt.plot` and `plt.imshow` to visualize the julia-set. Feel free to play with `c` to create different sets.
 
 

@@ -49,6 +49,7 @@ class Complex(object):
         Returns:
             float: The radius of self.
         """
+        # TODO: Implement me.
         return None
 
     def angle(self) -> float:

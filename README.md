@@ -41,7 +41,7 @@ To install the python packages required for this exercise.
   Vscode will now display your tests on the sidebar on the left. Click the play symbol next to the tests folder to run all tests.
 
 ### Task 6: Implement and test a python class.
-- Open `src/my_code.py` and finish the `__init__` function of the `Complex` class. The idea here is to implement support for complex numbers. Double-check your code by running `nox -s test`. 
+- Open `src/my_code.py` and finish the `__init__` function of the `Complex` class. The idea here is to implement support for complex numbers (see: https://en.wikipedia.org/wiki/Complex_number for more information about complex numbers). Double-check your code by running `nox -s test`. 
 
 ### Task 7: Breakpoints
 - Click on a line number in `my_code.py`. A red dot appears. Press the `debug_test` button in the `Testing` tab, Python will pause, and you can use the build-in `Debug console` to explore the data at this point.

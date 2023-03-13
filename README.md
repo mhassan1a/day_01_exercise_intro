@@ -12,7 +12,7 @@ Thank you for taking our course. Completing the following tasks will prepare you
 In Vscode, you can now open a rendered version of this readme. Right-click the file and select `open Preview`.
 
 ### Task 2: Downloading and installing Miniconda.
-- Navigate to `https://docs.conda.io/en/latest/miniconda.html` in your favorite browser.
+- Navigate to https://docs.conda.io/en/latest/miniconda.html in your favorite browser.
 The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` file.
 
 - Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64.sh`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64.sh` .
@@ -31,7 +31,7 @@ The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` 
 To install the python packages required for this exercise.
 
 ### Task 5: Run an automatic test.
-- Scientific software must provide reproducible results. Automatic testing ensures our software runs reliably. We recommend Nox for test automation `https://nox.thea.codes/en/stable/`. 
+- Scientific software must provide reproducible results. Automatic testing ensures our software runs reliably. We recommend Nox for test automation https://nox.thea.codes/en/stable/. 
 - To run some of the tests we prepared for you type,
     ```bash
     nox -s test

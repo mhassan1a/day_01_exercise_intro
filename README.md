@@ -1,21 +1,28 @@
 ## Introductory Exercises
-Thank you for taking our course. Completing the following tasks will prepare you for the exercise sessions in the coming weeks. Machine learning on larger scales often requires using central compute clusters, which run on Linux. Consequently, we will use workstations running Ubuntu Linux.
+Thank you for taking our course. Completing the following tasks will prepare you for the exercise sessions in the coming weeks. Machine learning on larger scales often requires using central compute clusters, which run on Linux. Consequently, we will use workstations running Ubuntu Linux. We highly recommend to use Linux systems instead of Windows.
 
 
 ### Task 1: Setting up your repository.
 - Configure GitHub for ssh access. You need to generate a key pair and add the public key to your GitHub account.
   - To generate your key follow the steps in: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
   - How to add a key is described here: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+- Hit the green `Code`-button in the upper right corner of this repository. Select the `SSH` tab and copy the link to your repository. This is necessary to clone your github repository onto your local machine.
 - Open a terminal by pressing `Ctrl+Alt+T`.
-- Clone this repository by running `git clone git@github.com:Machine-Learning-Foundations-in-Python/day_01_exercise_intro.git` in the terminal. Navigate into this directory by typing `cd day_01_exercise_intro`.
+- Clone this repository by running 
+  ```bash
+  git clone <ssh-link>
+  ```
+  in the terminal and substitute the `<ssh-link>` with the link you just copied. After pressing `Enter` your repository will be downloaded into your current working directory.
+- Navigate into the downloaded directory by typing `cd day_01_exercise_intro-yourname`. Use `ls` to list the contents of the folder you are currently working in. If Visual Studio Code is installed correctly you can open it from the terminal by typing `code .`.
 
-In Vscode, you can now open a rendered version of this readme. Right-click the file and select `open Preview`.
+In Vscode, you can now open a rendered version of this readme. Right-click the file and select `Open Preview`.
 
 ### Task 2: Downloading and installing Miniconda.
 - Navigate to https://docs.conda.io/en/latest/miniconda.html in your favorite browser.
 The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` file.
 
-- Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64.sh`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64.sh` .
+- Open the terminal on your machine by pressing `Ctrl+Alt+T`. Navigate into the Downloads folder by typing `cd Downloads`. Before running the installer, set the executable bit by typing `chmod +x Miniconda3-latest-Linux-x86_64.sh`. Install Miniconda via `./Miniconda3-latest-Linux-x86_64.sh`.
+- Close your terminal and open it again. Check if you can see the `(base)` environment name on the left hand side of your command line. This means that conda is installed correctly
 
 
 ### Task 3: Setting up Vscode for python development
@@ -23,12 +30,12 @@ The HRZ-Pool computers run Ubuntu Linux. Download the `Miniconda3 Linux 64-bit` 
 - Make the Miniconda interpreter your default in Vscode by pressing `Ctrl+Shift+P`. A terminal opens. Type `select interpreter` and press enter. In the following dialogue, choose the `base` environment. 
 
 ### Task 4: Installing dependencies
-- Open a terminal by pressing `Ctrl+Alt+T`. Navigate into this directory by typing `cd path_to_this_folder`. Type
+- Open a terminal by pressing `Ctrl+Alt+T`. Navigate into this directory by typing `cd day_01_exercise_intro-yourname`. Type
 
   ```bash
   pip install -r requirements.txt
   ```
-To install the python packages required for this exercise.
+  to install the python packages required for this exercise.
 
 ### Task 5: Run an automatic test.
 - Scientific software must provide reproducible results. Automatic testing ensures our software runs reliably. We recommend Nox for test automation https://nox.thea.codes/en/stable/. 
@@ -69,3 +76,36 @@ To install the python packages required for this exercise.
   ```bash
   nox -s typing
   ```
+
+### Final Task 13: Finishing up the task
+At the end of the day after you finished all your tasks we want to save the results and upload them to your online github repository. Ideally, all the tests were successful. Follow these steps:
+- Open a terminal by pressing `Ctrl+Alt+T`. Navigate into this directory using the `cd` command.
+- Use
+  ```bash
+  git status
+  ```
+  to check if there are any files to commit. These are marked red.
+- Add all the red files by using
+  ```bash
+  git add *
+  ```
+- These files are now staged and can be commited. If you are commiting for the first time you will have to specify your github email address and username by typing
+  ```bash
+  git config --global user.email "put_your_email@here.com"
+  git config --global user.name "put_your_username_here"
+  ```
+- Now commit the staged files with
+  ```bash
+  git commit -m "Final commit"
+  ```
+  and use your own commit message to describe the commit.
+- Finally, push everything to github with
+  ```bash
+  git push
+  ```
+
+Alternatively, you can use Vscode to commit and push your results. 
+- For that, go to your code in Vscode and open the source control tab on the left hand side or press `Ctrl+Shift+G`. 
+- In the window that opens up enter your individual commit message and press `Ctrl+Enter` to commit to the main branch.
+- Vscode might ask if you want to stage files that haven't been staged yet. Continue with `yes`. You can also stage files by using the plus sign next to the file.
+- Finally, push everything by hitting the `Sync Changes` button.

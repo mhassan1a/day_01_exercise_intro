@@ -89,7 +89,7 @@ At the end of the day after you finished all your tasks we want to save the resu
   to check if there are any files to commit. These are marked red.
 - Add all the red files by using
   ```bash
-  git add *
+  git add -A
   ```
 - These files are now staged and can be commited. If you are commiting for the first time you will have to specify your github email address and username by typing
   ```bash

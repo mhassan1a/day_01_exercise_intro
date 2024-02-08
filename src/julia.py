@@ -33,4 +33,11 @@ if __name__ == "__main__":
     scaled = [[log10(val + 1e-12) for val in row] for row in mesh]
 
     # TODO: use plt.imshow and plt.plot to explore the scaled values.
+    plt.imshow(scaled, cmap="viridis")
+    plt.plot(scaled)
+    plt.show()
     # TODO: combine plt.imshow and plt.colorbar.
+    plt.imshow(scaled, cmap="viridis")
+    plt.title("Scaled Values")
+    plt.colorbar()  # Adding color bar
+    plt.show()

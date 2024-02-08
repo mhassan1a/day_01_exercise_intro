@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from math import atan2, cos, sin, sqrt
-
+import numpy as np
 
 def my_function() -> bool:
     """Return True immediately to demonstrate a working test.
@@ -25,6 +25,8 @@ class Complex(object):
             imagpart (float): The complex part of the number.
         """
         # TODO: Implement me.
+        self.realpart = realpart
+        self.imagpart = imagpart
 
     def add(self, other: Complex) -> Complex:
         """Add to complex numbers.
@@ -39,7 +41,7 @@ class Complex(object):
             Complex: A complex number object containig the sum of the two.
         """
         # TODO: Implement me.
-        return None
+        return Complex(self.realpart + other.realpart, self.imagpart + other.imagpart)
 
     def radius(self) -> float:
         """Compute the radius of the compelex number.
@@ -50,7 +52,7 @@ class Complex(object):
             float: The radius of self.
         """
         # TODO: Implement me.
-        return None
+        return np.sqrt(self.realpart**2 + self.imagpart**2)
 
     def angle(self) -> float:
         """Compute the angle of the complex number.
@@ -62,7 +64,7 @@ class Complex(object):
             float: The angle of self.
         """
         # TODO: Implement me.
-        return None
+        return np.arctan2(self.imagpart, self.realpart)
 
     def multiply(self, other: Complex) -> Complex:
         """Multiply two complex numbers (x_1 + jy_1) * (x_2 + jy_2).
@@ -82,5 +84,13 @@ class Complex(object):
             Complex: The product of self and other.
         """
         # TODO: Implement me.
-        return None
+        r1 = self.radius()
+        r2 = other.radius()
+        theta1 = self.angle()
+        theta2 = other.angle()
+        r_mul = r1 * r2
+        theta_mul = theta1 + theta2
+        x = r_mul * np.cos(theta_mul)
+        y = r_mul * np.sin(theta_mul)
+        return Complex(x, y)
 
